@@ -1,0 +1,22 @@
+{
+  "name": "toms-sass-helpers",
+  "version": "1.0.0",
+  "description": "Tom's SASS helpers.",
+  "main": "style.scss",
+  "scripts": {
+    "watch": "sass style.scss style.css --no-source-map --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomslominski/toms-sass-helpers.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Tom Slominski <tom@slomin.ski>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomslominski/toms-sass-helpers/issues"
+  },
+  "homepage": "https://github.com/tomslominski/toms-sass-helpers#readme"
+}

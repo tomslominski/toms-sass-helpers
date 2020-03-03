@@ -1,0 +1,64 @@
+////
+/// Tom's SASS helpers
+/// 
+/// @author Tom Slominski
+////
+
+@use "sass:map";
+
+$breakpoints: (
+	"sm": 480,
+	"md": 768,
+	"lg": 1024,
+	"xl": 1280,
+	"xxl": 1600,
+	"xxxl": 1920
+);
+
+/// Generate a media query using one or two integers.
+///
+/// @access public
+/// @param {int|null} $min [null] - min-media value.
+/// @param {int|null} $max [null] - max-media value.
+/// @output A media query built from the provided values.
+/// @example scss
+///   @include media( 480, 768 ) =>
+///   @media only screen and (min-width: 480px) and (max-width: 767px) {}
+@mixin media( $min: null, $max: null ) {
+	// Make sure the queries don't overlap
+	$max: if( $max, $max - 1, null );
+	
+	// Format values
+	$min: if( $min, $min + "px", null );
+	$max: if( $max, $max + "px", null );
+	
+	// Write media query
+	@if $min and $max {
+		@media only screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max {
+		@media only screen and (max-width: $max) {
+			@content;
+		}
+	} @else if $min {
+		@media only screen and (min-width: $min) {
+			@content;
+		}
+	}
+}
+
+/// Generate a media query using one or two breakpoint names.
+///
+/// @access public
+/// @param {string|null} $min [null] - min-media breakpoint.
+/// @param {string|null} $max [null] - max-media breakpoint.
+/// @output A media query built from the provided values.
+/// @example scss
+///   @include bp( sm, md ) =>
+///   @media only screen and (min-width: 480px) and (max-width: 767px) {}
+@mixin bp( $min: null, $max: null ) {
+	@include media( map.get($breakpoints, $min), map.get($breakpoints, $max) ) {
+		@content;
+	}
+}
