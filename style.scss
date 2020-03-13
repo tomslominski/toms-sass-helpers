@@ -50,6 +50,14 @@ $breakpoints: (
 
 /// Generate a media query using one or two breakpoint names.
 ///
+/// The default breakpoints are:
+/// - sm: 480
+/// - md: 768
+/// - lg: 1024
+/// - xl: 1280
+/// - xxl: 1600
+/// - xxxl: 1920
+///
 /// @access public
 /// @param {string|null} $min [null] - min-media breakpoint.
 /// @param {string|null} $max [null] - max-media breakpoint.
