@@ -1,6 +1,6 @@
 {
   "name": "toms-sass-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tom's SASS helpers.",
   "main": "style.scss",
   "scripts": {
@@ -18,5 +18,5 @@
   "bugs": {
     "url": "https://github.com/tomslominski/toms-sass-helpers/issues"
   },
-  "homepage": "https://github.com/tomslominski/toms-sass-helpers#readme"
+  "homepage": "https://tomslominski.github.io/toms-sass-helpers/"
 }
