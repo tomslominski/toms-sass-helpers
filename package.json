@@ -4,7 +4,7 @@
   "description": "Tom's SASS helpers.",
   "main": "style.scss",
   "scripts": {
-    "watch": "sass style.scss style.css --no-source-map --watch"
+    "watch": "sass _index.scss index.css --no-source-map --watch"
   },
   "repository": {
     "type": "git",
