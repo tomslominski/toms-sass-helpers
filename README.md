@@ -4,4 +4,4 @@ The documentation for the individual mixins can be found at https://tomslominski
 
 Build with Dart SASS for testing using `npm run watch`.
 
-Generate docs using `sassdocify style.scss`;
+Generate docs using `sassdocify style.scss`.
